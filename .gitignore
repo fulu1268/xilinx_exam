@@ -68,5 +68,8 @@
 !*.elf
 !*.bmm
 !*.xmp
+#user add
+!*.mdd
+!Makefile
 
 # End of https://www.gitignore.io/api/vivado
