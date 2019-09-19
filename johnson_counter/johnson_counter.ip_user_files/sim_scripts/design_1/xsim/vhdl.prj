@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ip/design_1_jc2_0_0/sim/design_1_jc2_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_Clock_Divider_0_0/sim/design_1_Clock_Divider_0_0.vhd" \
+"../../../bd/design_1/sim/design_1.vhd" \
+"../../../bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd" \
+"../../../bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd" \
+"../../../bd/design_1/ip/design_1_my_multiplier_0_0/sim/design_1_my_multiplier_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
+
+nosort
