@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Sep  1 14:45:41 2019
-// Host        : DESKTOP-B175D9L running 64-bit major release  (build 9200)
+// Date        : Thu Sep 19 19:42:48 2019
+// Host        : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.v
+//               D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.v
 // Design      : design_1_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

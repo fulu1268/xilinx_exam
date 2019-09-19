@@ -60,29 +60,30 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/dev/xilinx/johnson_counter/johnson_counter.cache/wt [current_project]
-  set_property parent.project_path D:/dev/xilinx/johnson_counter/johnson_counter.xpr [current_project]
-  set_property ip_repo_paths D:/dev/xilinx/ip_repo/my_multiplier_1.0 [current_project]
+  set_property webtalk.parent_dir D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.cache/wt [current_project]
+  set_property parent.project_path D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.xpr [current_project]
+  set_property ip_repo_paths {
+  D:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0
+  D:/dev/HDL/xilinx_exam/ip_repo/my_multiplier_1.0
+} [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/dev/xilinx/johnson_counter/johnson_counter.cache/ip [current_project]
+  set_property ip_output_repo D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet D:/dev/xilinx/johnson_counter/johnson_counter.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc D:/dev/xilinx/johnson_counter/johnson_counter.srcs/constrs_1/new/johnson_counter.xdc
+  read_xdc D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/constrs_1/new/johnson_counter.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false

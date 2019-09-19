@@ -2,50 +2,52 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Sep  1 14:44:37 2019
-# Process ID: 11260
-# Current directory: D:/dev/xilinx/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1
+# Start of session at: Thu Sep 19 19:42:15 2019
+# Process ID: 10844
+# Current directory: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1
 # Command line: vivado.exe -log design_1_my_multiplier_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_my_multiplier_0_0.tcl
-# Log file: D:/dev/xilinx/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.vds
-# Journal file: D:/dev/xilinx/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1\vivado.jou
+# Log file: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.vds
+# Journal file: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_my_multiplier_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/xilinx/ip_repo/my_multiplier_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/HDL/xilinx_exam/ip_repo/my_multiplier_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-5242] IP Cache entry (cache-ID 6ff48ba5abfa7a51) does not have the required number of cached files and is not valid. Please delete this entry using the TCL command: 'config_ip_cache -remove [get_ips design_1_my_multiplier_0_0]'
 Command: synth_design -top design_1_my_multiplier_0_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12804 
+INFO: Helper process launched with PID 10176 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 468.871 ; gain = 95.625
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 468.398 ; gain = 95.719
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_my_multiplier_0_0' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'design_1_my_multiplier_0_0' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:82]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'my_multiplier_v1_0' declared at 'd:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:5' bound to instance 'U0' of component 'my_multiplier_v1_0' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'my_multiplier_v1_0' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:49]
+INFO: [Synth 8-3491] module 'my_multiplier_v1_0' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:5' bound to instance 'U0' of component 'my_multiplier_v1_0' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'my_multiplier_v1_0' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:49]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'my_multiplier_v1_0_S00_AXI' declared at 'd:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:5' bound to instance 'my_multiplier_v1_0_S00_AXI_inst' of component 'my_multiplier_v1_0_S00_AXI' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'my_multiplier_v1_0_S00_AXI' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:86]
+INFO: [Synth 8-3491] module 'my_multiplier_v1_0_S00_AXI' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:5' bound to instance 'my_multiplier_v1_0_S00_AXI_inst' of component 'my_multiplier_v1_0_S00_AXI' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'my_multiplier_v1_0_S00_AXI' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:86]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:234]
-INFO: [Synth 8-226] default block is never used [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:364]
-WARNING: [Synth 8-614] signal 'multiplier_out' is read in the process but is not in the sensitivity list [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:359]
-INFO: [Synth 8-3491] module 'multiplier' declared at 'd:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:6' bound to instance 'multiplier_0' of component 'multiplier' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:398]
-INFO: [Synth 8-638] synthesizing module 'multiplier' [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'multiplier' (1#1) [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:15]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:230]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'my_multiplier_v1_0_S00_AXI' (2#1) [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:86]
-INFO: [Synth 8-256] done synthesizing module 'my_multiplier_v1_0' (3#1) [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'design_1_my_multiplier_0_0' (4#1) [d:/dev/xilinx/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:82]
+INFO: [Synth 8-226] default block is never used [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:234]
+INFO: [Synth 8-226] default block is never used [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:364]
+WARNING: [Synth 8-614] signal 'multiplier_out' is read in the process but is not in the sensitivity list [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:359]
+INFO: [Synth 8-3491] module 'multiplier' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:6' bound to instance 'multiplier_0' of component 'multiplier' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:398]
+INFO: [Synth 8-638] synthesizing module 'multiplier' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (1#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/edit_my_multiplier_v1_0.srcs/sources_1/imports/xilinx/multiplier.vhd:15]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:230]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'my_multiplier_v1_0_S00_AXI' (2#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0_S00_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'my_multiplier_v1_0' (3#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/09d9/hdl/my_multiplier_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'design_1_my_multiplier_0_0' (4#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/synth/design_1_my_multiplier_0_0.vhd:82]
 WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
@@ -53,7 +55,7 @@ WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S
 WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design my_multiplier_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 525.469 ; gain = 152.223
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 524.023 ; gain = 151.344
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -66,10 +68,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 525.469 ; gain = 152.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 524.023 ; gain = 151.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 525.469 ; gain = 152.223
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 524.023 ; gain = 151.344
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -78,32 +80,32 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 869.063 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 868.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 869.063 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 868.125 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 870.906 ; gain = 1.844
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 870.992 ; gain = 2.867
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 870.906 ; gain = 497.660
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 870.992 ; gain = 498.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 870.906 ; gain = 497.660
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 870.992 ; gain = 498.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 870.906 ; gain = 497.660
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 870.992 ; gain = 498.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 870.906 ; gain = 497.660
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 870.992 ; gain = 498.313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -172,7 +174,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/my_mu
 INFO: [Synth 8-3886] merging instance 'U0/my_multiplier_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/my_multiplier_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/my_multiplier_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 870.906 ; gain = 497.660
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 870.992 ; gain = 498.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -199,13 +201,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 914.594 ; gain = 541.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 914.203 ; gain = 541.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 914.816 ; gain = 541.570
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 914.426 ; gain = 541.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -217,7 +219,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,7 +243,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -254,7 +256,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,25 +268,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -320,33 +322,32 @@ Report Instance Areas:
 |4     |      multiplier_0                  |multiplier                 |     1|
 +------+------------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 925.402 ; gain = 206.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 925.402 ; gain = 552.156
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 924.980 ; gain = 205.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 924.980 ; gain = 552.301
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 925.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.980 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+32 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 925.402 ; gain = 563.625
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 925.402 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 924.980 ; gain = 563.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.980 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/dev/xilinx/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_my_multiplier_0_0, cache-ID = 6ff48ba5abfa7a51
+INFO: [Common 17-1381] The checkpoint 'D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 925.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.980 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/dev/xilinx/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_my_multiplier_0_0_synth_1/design_1_my_multiplier_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_my_multiplier_0_0_utilization_synth.rpt -pb design_1_my_multiplier_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep  1 14:45:40 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 19 19:42:47 2019...

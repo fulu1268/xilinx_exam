@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Sep  1 19:08:56 2019
-| Host         : DESKTOP-B175D9L running 64-bit major release  (build 9200)
+| Date         : Thu Sep 19 20:15:24 2019
+| Host         : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7z020clg400-1
@@ -23,15 +23,31 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 6
+             Violations found: 9
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
+| TIMING-16 | Warning  | Large setup violation       | 3          |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 6          |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.222 ns between design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/slv_reg2_reg[4]/C (clocked by clk_fpga_0) and design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/ALU_0/ALU_Result_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -4.005 ns between design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/slv_reg2_reg[4]/C (clocked by clk_fpga_0) and design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/ALU_0/ALU_Result_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -5.816 ns between design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/slv_reg2_reg[4]/C (clocked by clk_fpga_0) and design_1_i/arithmetic_operations_0/U0/arithmetic_operations_v1_0_S00_AXI_inst/ALU_0/ALU_Result_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin design_1_i/jc2_0/U0/dir_reg[0]/C is not reached by a timing clock

@@ -1,0 +1,438 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Sep 19 20:09:33 2019
+# Process ID: 8408
+# Current directory: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_arithmetic_operations_0_1_synth_1
+# Command line: vivado.exe -log design_1_arithmetic_operations_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_arithmetic_operations_0_1.tcl
+# Log file: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_arithmetic_operations_0_1_synth_1/design_1_arithmetic_operations_0_1.vds
+# Journal file: D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_arithmetic_operations_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_arithmetic_operations_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/HDL/xilinx_exam/ip_repo/my_multiplier_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_arithmetic_operations_0_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9072 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 467.313 ; gain = 95.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_arithmetic_operations_0_1' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/synth/design_1_arithmetic_operations_0_1.vhd:82]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'arithmetic_operations_v1_0' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0.vhd:5' bound to instance 'U0' of component 'arithmetic_operations_v1_0' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/synth/design_1_arithmetic_operations_0_1.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'arithmetic_operations_v1_0' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0.vhd:49]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'arithmetic_operations_v1_0_S00_AXI' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:5' bound to instance 'arithmetic_operations_v1_0_S00_AXI_inst' of component 'arithmetic_operations_v1_0_S00_AXI' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'arithmetic_operations_v1_0_S00_AXI' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:247]
+INFO: [Synth 8-226] default block is never used [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:378]
+WARNING: [Synth 8-614] signal 'carry_out' is read in the process but is not in the sensitivity list [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:373]
+WARNING: [Synth 8-614] signal 'alu_out' is read in the process but is not in the sensitivity list [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:373]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'ALU' declared at 'd:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/alu.vhd:9' bound to instance 'ALU_0' of component 'ALU' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:412]
+INFO: [Synth 8-638] synthesizing module 'ALU' [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/alu.vhd:28]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/alu.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (1#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/alu.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:243]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:245]
+INFO: [Synth 8-256] done synthesizing module 'arithmetic_operations_v1_0_S00_AXI' (2#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0_S00_AXI.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'arithmetic_operations_v1_0' (3#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/e075/hdl/arithmetic_operations_v1_0.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'design_1_arithmetic_operations_0_1' (4#1) [d:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/synth/design_1_arithmetic_operations_0_1.vhd:82]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[31]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[30]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[29]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[28]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[27]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[26]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[25]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[24]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[23]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[22]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[21]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[20]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[19]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[18]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[17]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[16]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[15]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[14]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[13]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[12]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[11]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[10]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[9]
+WARNING: [Synth 8-3331] design ALU has unconnected port A_IN[8]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[31]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[30]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[29]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[28]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[27]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[26]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[25]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[24]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[23]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[22]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[21]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[20]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[19]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[18]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[17]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[16]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[15]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[14]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[13]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[12]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[11]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[10]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[9]
+WARNING: [Synth 8-3331] design ALU has unconnected port B_IN[8]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[31]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[30]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[29]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[28]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[27]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[26]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[25]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[24]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[23]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[22]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[21]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[20]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[19]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[18]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[17]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[16]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[15]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[14]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[13]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[12]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[11]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[10]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[9]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[8]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[7]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[6]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[5]
+WARNING: [Synth 8-3331] design ALU has unconnected port ALU_Sel[4]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design arithmetic_operations_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 524.020 ; gain = 151.719
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 524.020 ; gain = 151.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 524.020 ; gain = 151.719
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 862.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 862.480 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 865.438 ; gain = 2.957
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 865.438 ; gain = 493.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 865.438 ; gain = 493.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 865.438 ; gain = 493.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 865.438 ; gain = 493.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module arithmetic_operations_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_arithmetic_operations_0_1 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/arithmetic_operations_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 865.438 ; gain = 493.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 870.891 ; gain = 498.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 871.188 ; gain = 498.887
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    34|
+|2     |LUT1   |     1|
+|3     |LUT2   |    60|
+|4     |LUT3   |    52|
+|5     |LUT4   |    42|
+|6     |LUT5   |    40|
+|7     |LUT6   |    46|
+|8     |MUXF7  |     7|
+|9     |FDCE   |    10|
+|10    |FDRE   |   136|
+|11    |FDSE   |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+-----------------------------------+------+
+|      |Instance                                    |Module                             |Cells |
++------+--------------------------------------------+-----------------------------------+------+
+|1     |top                                         |                                   |   431|
+|2     |  U0                                        |arithmetic_operations_v1_0         |   431|
+|3     |    arithmetic_operations_v1_0_S00_AXI_inst |arithmetic_operations_v1_0_S00_AXI |   431|
+|4     |      ALU_0                                 |ALU                                |   237|
++------+--------------------------------------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 881.977 ; gain = 168.258
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.977 ; gain = 509.676
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 893.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 893.133 ; gain = 532.297
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 893.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_arithmetic_operations_0_1_synth_1/design_1_arithmetic_operations_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_arithmetic_operations_0_1, cache-ID = e028257e7ab551eb
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 893.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.runs/design_1_arithmetic_operations_0_1_synth_1/design_1_arithmetic_operations_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_arithmetic_operations_0_1_utilization_synth.rpt -pb design_1_arithmetic_operations_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 19 20:09:57 2019...

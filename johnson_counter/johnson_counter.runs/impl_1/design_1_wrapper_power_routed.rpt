@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun Sep  1 19:08:57 2019
-| Host             : DESKTOP-B175D9L running 64-bit major release  (build 9200)
+| Date             : Thu Sep 19 20:15:24 2019
+| Host             : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z020clg400-1
@@ -53,13 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1963 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      591 |     53200 |            1.11 |
-|   Register              |    <0.001 |      949 |    106400 |            0.89 |
-|   CARRY4                |    <0.001 |       14 |     13300 |            0.11 |
+| Slice Logic             |     0.001 |     2426 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      816 |     53200 |            1.53 |
+|   Register              |    <0.001 |     1099 |    106400 |            1.03 |
+|   CARRY4                |    <0.001 |       48 |     13300 |            0.36 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      208 |       --- |             --- |
-| Signals                 |     0.002 |     1508 |       --- |             --- |
+|   Others                |     0.000 |      212 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |        7 |     53200 |            0.01 |
+| Signals                 |     0.002 |     1878 |       --- |             --- |
 | DSPs                    |     0.000 |        2 |       220 |            0.91 |
 | I/O                     |     0.000 |        4 |       125 |            3.20 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
@@ -152,10 +153,10 @@ Table of Contents
 +--------------------------+-----------+
 | design_1_wrapper         |     1.263 |
 |   design_1_i             |     1.263 |
-|     processing_system7_0 |     1.256 |
-|       inst               |     1.256 |
-|     ps7_0_axi_periph     |     0.005 |
-|       s00_couplers       |     0.004 |
+|     processing_system7_0 |     1.257 |
+|       inst               |     1.257 |
+|     ps7_0_axi_periph     |     0.004 |
+|       s00_couplers       |     0.003 |
 +--------------------------+-----------+
 
 

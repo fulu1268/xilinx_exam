@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>846bb687</spirit:value>
+            <spirit:value>28709529</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>846bb687</spirit:value>
+            <spirit:value>28709529</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -296,7 +296,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7b90956b</spirit:value>
+            <spirit:value>32483193</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -310,7 +310,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dda4df14</spirit:value>
+            <spirit:value>fd592ead</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -324,7 +324,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>16328387</spirit:value>
+            <spirit:value>45a2f450</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -661,7 +661,7 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
@@ -685,7 +685,7 @@
       <spirit:file>
         <spirit:name>hdl/arithmetic_operations_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1b0c10cf</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_413180b0</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -818,8 +818,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>arithmetic_operations_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-09-19T01:42:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-09-19T11:09:05Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@9a4250d_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff5f91d_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
@@ -832,13 +832,57 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@11d765aa_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@22d753f4_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@dfc8a3c_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@133f1699_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@217b7599_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57d13a63_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e1f5cf_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7341495c_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4339250_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48a7239_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@110273a_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73cc4b15_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f69c129_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ba4454f_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e6e644_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eea322_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4382adfb_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6811fd20_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c13b16_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca31afa_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c20b608_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f22bbed_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20986810_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6660496d_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a64fdda_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ae71a43_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45da197a_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52280274_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37488ae_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227848b4_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cca82ad_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205c034f_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa4edea_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1584c6e1_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e137ab1_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50813391_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13daa33f_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce5622a_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7609c927_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6413e87e_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2192e2_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33a2d527_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70a31441_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@162a99cc_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@589b69f9_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ae8b5f5_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2987b3f3_ARCHIVE_LOCATION">d:/dev/HDL/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a6aebf4"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="952f0ca9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="efffe71f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4bdab610"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="276819bb"/>

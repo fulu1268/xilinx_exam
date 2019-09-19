@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Sep  1 01:13:36 2019
-// Host        : DESKTOP-B175D9L running 64-bit major release  (build 9200)
+// Date        : Thu Sep 19 19:42:44 2019
+// Host        : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_jc2_0_0_sim_netlist.v
 // Design      : design_1_jc2_0_0
@@ -81,7 +81,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jc2
         .D(\dir[0]_i_1_n_0 ),
         .Q(dir),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h74)) 
     \q[0]_i_1 
@@ -89,7 +89,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jc2
         .I1(dir),
         .I2(q[1]),
         .O(\q[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \q[1]_i_1 
@@ -97,7 +97,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jc2
         .I1(dir),
         .I2(q[2]),
         .O(\q[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \q[2]_i_1 
@@ -105,7 +105,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_jc2
         .I1(dir),
         .I2(q[3]),
         .O(\q[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h8B)) 
     \q[3]_i_1 
