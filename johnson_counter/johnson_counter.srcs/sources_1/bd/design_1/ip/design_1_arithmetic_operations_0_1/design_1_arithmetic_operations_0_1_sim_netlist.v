@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Sep 19 20:09:57 2019
-// Host        : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
+// Date        : Fri Sep 20 00:56:47 2019
+// Host        : DESKTOP-B175D9L running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1_sim_netlist.v
+//               D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1_sim_netlist.v
 // Design      : design_1_arithmetic_operations_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -107,25 +107,24 @@ endmodule
 module design_1_arithmetic_operations_0_1_ALU
    (SR,
     D,
-    CO,
     alu_sel_valid,
     s00_axi_aclk,
+    s00_axi_aresetn,
     Q,
-    \axi_rdata_reg[7] ,
-    \axi_rdata_reg[7]_0 ,
-    axi_araddr,
-    s00_axi_aresetn);
+    \axi_rdata_reg[8] ,
+    \axi_rdata_reg[8]_0 ,
+    axi_araddr);
   output [0:0]SR;
-  output [7:0]D;
-  output [0:0]CO;
+  output [8:0]D;
   input alu_sel_valid;
   input s00_axi_aclk;
-  input [7:0]Q;
-  input [7:0]\axi_rdata_reg[7] ;
-  input [7:0]\axi_rdata_reg[7]_0 ;
-  input [1:0]axi_araddr;
   input s00_axi_aresetn;
+  input [8:0]Q;
+  input [8:0]\axi_rdata_reg[8] ;
+  input [8:0]\axi_rdata_reg[8]_0 ;
+  input [1:0]axi_araddr;
 
+  wire [7:0]ALU_Out;
   wire [7:0]ALU_Result;
   wire \ALU_Result0_inferred__0/i___0_carry__0_n_1 ;
   wire \ALU_Result0_inferred__0/i___0_carry__0_n_2 ;
@@ -258,21 +257,14 @@ module design_1_arithmetic_operations_0_1_ALU
   wire \ALU_Result_reg[7]_i_8_n_3 ;
   wire ALU_sel_valid_d1;
   wire ALU_sel_valid_d2;
-  wire [0:0]CO;
-  wire [7:0]D;
-  wire [7:0]Q;
+  wire Carryout;
+  wire [8:0]D;
+  wire [8:0]Q;
   wire [0:0]SR;
   wire alu_sel_valid;
   wire [1:0]axi_araddr;
-  wire \axi_rdata[31]_i_10_n_0 ;
-  wire \axi_rdata[31]_i_11_n_0 ;
-  wire \axi_rdata[31]_i_12_n_0 ;
-  wire \axi_rdata[31]_i_9_n_0 ;
-  wire \axi_rdata_reg[31]_i_4_n_1 ;
-  wire \axi_rdata_reg[31]_i_4_n_2 ;
-  wire \axi_rdata_reg[31]_i_4_n_3 ;
-  wire [7:0]\axi_rdata_reg[7] ;
-  wire [7:0]\axi_rdata_reg[7]_0 ;
+  wire [8:0]\axi_rdata_reg[8] ;
+  wire [8:0]\axi_rdata_reg[8]_0 ;
   wire [7:0]data0;
   wire [7:0]data1;
   wire data14;
@@ -480,8 +472,25 @@ module design_1_arithmetic_operations_0_1_ALU
   wire minusOp_carry_n_1;
   wire minusOp_carry_n_2;
   wire minusOp_carry_n_3;
+  wire p_1_in;
+  wire [8:8]plusOp0_out;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
+  wire \tmp[8]_i_10_n_0 ;
+  wire \tmp[8]_i_3_n_0 ;
+  wire \tmp[8]_i_4_n_0 ;
+  wire \tmp[8]_i_5_n_0 ;
+  wire \tmp[8]_i_6_n_0 ;
+  wire \tmp[8]_i_7_n_0 ;
+  wire \tmp[8]_i_8_n_0 ;
+  wire \tmp[8]_i_9_n_0 ;
+  wire \tmp_reg[8]_i_1_n_1 ;
+  wire \tmp_reg[8]_i_1_n_2 ;
+  wire \tmp_reg[8]_i_1_n_3 ;
+  wire \tmp_reg[8]_i_2_n_0 ;
+  wire \tmp_reg[8]_i_2_n_1 ;
+  wire \tmp_reg[8]_i_2_n_2 ;
+  wire \tmp_reg[8]_i_2_n_3 ;
   wire [3:3]\NLW_ALU_Result0_inferred__0/i___0_carry__0_CO_UNCONNECTED ;
   wire [3:0]\NLW_ALU_Result0_inferred__0/i___22_carry__0_CO_UNCONNECTED ;
   wire [3:1]\NLW_ALU_Result0_inferred__0/i___22_carry__0_O_UNCONNECTED ;
@@ -499,8 +508,6 @@ module design_1_arithmetic_operations_0_1_ALU
   wire [3:2]\NLW_ALU_Result_reg[5]_i_5_CO_UNCONNECTED ;
   wire [3:1]\NLW_ALU_Result_reg[5]_i_5_O_UNCONNECTED ;
   wire [3:3]\NLW_ALU_Result_reg[7]_i_7_CO_UNCONNECTED ;
-  wire [0:0]\NLW_ALU_Result_reg[7]_i_8_O_UNCONNECTED ;
-  wire [3:1]\NLW_axi_rdata_reg[31]_i_4_O_UNCONNECTED ;
   wire [3:0]NLW_gtOp_carry_O_UNCONNECTED;
   wire [3:2]NLW_i___211_carry_i_1_CO_UNCONNECTED;
   wire [3:1]NLW_i___211_carry_i_1_O_UNCONNECTED;
@@ -514,7 +521,57 @@ module design_1_arithmetic_operations_0_1_ALU
   wire [3:2]NLW_i___211_carry_i_7_CO_UNCONNECTED;
   wire [3:1]NLW_i___211_carry_i_7_O_UNCONNECTED;
   wire [3:3]NLW_minusOp_carry__0_CO_UNCONNECTED;
+  wire [3:0]\NLW_tmp_reg[8]_i_1_O_UNCONNECTED ;
+  wire [3:0]\NLW_tmp_reg[8]_i_2_O_UNCONNECTED ;
 
+  FDRE \ALU_Out_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[0]),
+        .Q(ALU_Out[0]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[1]),
+        .Q(ALU_Out[1]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[2]),
+        .Q(ALU_Out[2]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[3]),
+        .Q(ALU_Out[3]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[4] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[4]),
+        .Q(ALU_Out[4]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[5] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[5]),
+        .Q(ALU_Out[5]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[6] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[6]),
+        .Q(ALU_Out[6]),
+        .R(1'b0));
+  FDRE \ALU_Out_reg[7] 
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(ALU_Result[7]),
+        .Q(ALU_Out[7]),
+        .R(1'b0));
   CARRY4 \ALU_Result0_inferred__0/i___0_carry 
        (.CI(1'b0),
         .CO({\ALU_Result0_inferred__0/i___0_carry_n_0 ,\ALU_Result0_inferred__0/i___0_carry_n_1 ,\ALU_Result0_inferred__0/i___0_carry_n_2 ,\ALU_Result0_inferred__0/i___0_carry_n_3 }),
@@ -604,73 +661,73 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(4'h6)) 
     \ALU_Result[0]_i_10 
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .O(\ALU_Result[0]_i_10_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[0]_i_11 
        (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .O(\ALU_Result[0]_i_11_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[0]_i_12 
        (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .O(\ALU_Result[0]_i_12_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[0]_i_13 
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .O(\ALU_Result[0]_i_13_n_0 ));
   LUT6 #(
     .INIT(64'hF808FFFFF8080000)) 
     \ALU_Result[0]_i_2 
-       (.I0(\axi_rdata_reg[7]_0 [1]),
+       (.I0(\axi_rdata_reg[8]_0 [1]),
         .I1(Q[7]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
         .I3(Q[1]),
-        .I4(\axi_rdata_reg[7]_0 [2]),
+        .I4(\axi_rdata_reg[8]_0 [2]),
         .I5(\ALU_Result[0]_i_4_n_0 ),
         .O(\ALU_Result[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h888B8BB8F33C3CCC)) 
     \ALU_Result[0]_i_3 
        (.I0(\ALU_Result[0]_i_5_n_0 ),
-        .I1(\axi_rdata_reg[7]_0 [2]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [2]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
         .I3(Q[0]),
-        .I4(\axi_rdata_reg[7] [0]),
-        .I5(\axi_rdata_reg[7]_0 [1]),
+        .I4(\axi_rdata_reg[8] [0]),
+        .I5(\axi_rdata_reg[8]_0 [1]),
         .O(\ALU_Result[0]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \ALU_Result[0]_i_4 
        (.I0(data3[0]),
         .I1(\ALU_Result0_inferred__0/i___0_carry_n_7 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[0]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[0]),
         .O(\ALU_Result[0]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'h0009FFFF00090000)) 
     \ALU_Result[0]_i_5 
        (.I0(Q[6]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(\ALU_Result[0]_i_6_n_0 ),
         .I3(\ALU_Result[0]_i_7_n_0 ),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data14),
         .O(\ALU_Result[0]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[0]_i_6 
        (.I0(Q[7]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .O(\ALU_Result[0]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
@@ -686,101 +743,101 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(4'h6)) 
     \ALU_Result[0]_i_8 
        (.I0(Q[5]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .O(\ALU_Result[0]_i_8_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[0]_i_9 
        (.I0(Q[4]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .O(\ALU_Result[0]_i_9_n_0 ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \ALU_Result[1]_i_2 
        (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[0]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
         .I4(\ALU_Result[1]_i_4_n_0 ),
         .O(\ALU_Result[1]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0114D66A)) 
     \ALU_Result[1]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [1]),
-        .I3(\axi_rdata_reg[7]_0 [0]),
-        .I4(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8] [1]),
+        .I3(\axi_rdata_reg[8]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [1]),
         .O(\ALU_Result[1]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \ALU_Result[1]_i_4 
        (.I0(data3[1]),
         .I1(\ALU_Result0_inferred__0/i___0_carry_n_6 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[1]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[1]),
         .O(\ALU_Result[1]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \ALU_Result[2]_i_2 
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[1]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
         .I4(\ALU_Result[2]_i_4_n_0 ),
         .O(\ALU_Result[2]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0114D66A)) 
     \ALU_Result[2]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
-        .I2(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
+        .I2(\axi_rdata_reg[8] [2]),
         .I3(Q[2]),
-        .I4(\axi_rdata_reg[7]_0 [1]),
+        .I4(\axi_rdata_reg[8]_0 [1]),
         .O(\ALU_Result[2]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \ALU_Result[2]_i_4 
        (.I0(data3[2]),
         .I1(\ALU_Result0_inferred__0/i___0_carry_n_5 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[2]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[2]),
         .O(\ALU_Result[2]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \ALU_Result[3]_i_2 
        (.I0(\ALU_Result[3]_i_4_n_0 ),
-        .I1(\axi_rdata_reg[7]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [2]),
         .I2(\ALU_Result[3]_i_5_n_0 ),
-        .I3(\axi_rdata_reg[7]_0 [1]),
+        .I3(\axi_rdata_reg[8]_0 [1]),
         .I4(\ALU_Result[3]_i_6_n_0 ),
         .O(\ALU_Result[3]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0114D66A)) 
     \ALU_Result[3]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
-        .I2(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
+        .I2(\axi_rdata_reg[8] [3]),
         .I3(Q[3]),
-        .I4(\axi_rdata_reg[7]_0 [1]),
+        .I4(\axi_rdata_reg[8]_0 [1]),
         .O(\ALU_Result[3]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \ALU_Result[3]_i_4 
        (.I0(Q[4]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[2]),
         .O(\ALU_Result[3]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h8BB8)) 
     \ALU_Result[3]_i_5 
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(\ALU_Result0_inferred__0/i___0_carry_n_4 ),
         .I3(\ALU_Result0_inferred__0/i___22_carry_n_7 ),
         .O(\ALU_Result[3]_i_5_n_0 ));
@@ -789,25 +846,25 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'hB8)) 
     \ALU_Result[3]_i_6 
        (.I0(data1[3]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(data0[3]),
         .O(\ALU_Result[3]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \ALU_Result[4]_i_2 
        (.I0(Q[5]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[3]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
         .I4(\ALU_Result[4]_i_4_n_0 ),
         .O(\ALU_Result[4]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h31161662)) 
     \ALU_Result[4]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
-        .I1(\axi_rdata_reg[7]_0 [1]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
-        .I3(\axi_rdata_reg[7] [4]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
+        .I3(\axi_rdata_reg[8] [4]),
         .I4(Q[4]),
         .O(\ALU_Result[4]_i_3_n_0 ));
   LUT6 #(
@@ -815,9 +872,9 @@ module design_1_arithmetic_operations_0_1_ALU
     \ALU_Result[4]_i_4 
        (.I0(data3[4]),
         .I1(\ALU_Result0_inferred__0/i___35_carry_n_6 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[4]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[4]),
         .O(\ALU_Result[4]_i_4_n_0 ));
   LUT2 #(
@@ -830,46 +887,46 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     \ALU_Result[4]_i_7 
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(\ALU_Result_reg[5]_i_6_n_4 ),
         .O(\ALU_Result[4]_i_7_n_0 ));
   LUT3 #(
     .INIT(8'h96)) 
     \ALU_Result[5]_i_10 
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(\ALU_Result0_inferred__4/i___7_carry__0_n_7 ),
         .O(\ALU_Result[5]_i_10_n_0 ));
   LUT3 #(
     .INIT(8'h96)) 
     \ALU_Result[5]_i_11 
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(\ALU_Result0_inferred__4/i___7_carry_n_4 ),
         .O(\ALU_Result[5]_i_11_n_0 ));
   LUT3 #(
     .INIT(8'h96)) 
     \ALU_Result[5]_i_12 
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(\ALU_Result0_inferred__4/i___7_carry_n_5 ),
         .O(\ALU_Result[5]_i_12_n_0 ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \ALU_Result[5]_i_2 
        (.I0(Q[6]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[4]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
         .I4(\ALU_Result[5]_i_4_n_0 ),
         .O(\ALU_Result[5]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h31161662)) 
     \ALU_Result[5]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
-        .I1(\axi_rdata_reg[7]_0 [1]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
-        .I3(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
+        .I3(\axi_rdata_reg[8] [5]),
         .I4(Q[5]),
         .O(\ALU_Result[5]_i_3_n_0 ));
   LUT6 #(
@@ -877,9 +934,9 @@ module design_1_arithmetic_operations_0_1_ALU
     \ALU_Result[5]_i_4 
        (.I0(data3[5]),
         .I1(\ALU_Result0_inferred__0/i___35_carry_n_5 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[5]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[5]),
         .O(\ALU_Result[5]_i_4_n_0 ));
   LUT2 #(
@@ -892,42 +949,42 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     \ALU_Result[5]_i_8 
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(\ALU_Result0_inferred__4/i___7_carry__0_n_5 ),
         .O(\ALU_Result[5]_i_8_n_0 ));
   LUT3 #(
     .INIT(8'h96)) 
     \ALU_Result[5]_i_9 
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(\ALU_Result0_inferred__4/i___7_carry__0_n_6 ),
         .O(\ALU_Result[5]_i_9_n_0 ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \ALU_Result[6]_i_2 
        (.I0(Q[7]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[5]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
         .I4(\ALU_Result[6]_i_4_n_0 ),
         .O(\ALU_Result[6]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h0114D66A)) 
     \ALU_Result[6]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
         .I1(Q[6]),
-        .I2(\axi_rdata_reg[7] [6]),
-        .I3(\axi_rdata_reg[7]_0 [0]),
-        .I4(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8] [6]),
+        .I3(\axi_rdata_reg[8]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [1]),
         .O(\ALU_Result[6]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \ALU_Result[6]_i_4 
        (.I0(data3[6]),
         .I1(\ALU_Result0_inferred__0/i___35_carry_n_4 ),
-        .I2(\axi_rdata_reg[7]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [1]),
         .I3(data1[6]),
-        .I4(\axi_rdata_reg[7]_0 [0]),
+        .I4(\axi_rdata_reg[8]_0 [0]),
         .I5(data0[6]),
         .O(\ALU_Result[6]_i_4_n_0 ));
   LUT2 #(
@@ -940,43 +997,43 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(4'h6)) 
     \ALU_Result[7]_i_10 
        (.I0(Q[6]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .O(\ALU_Result[7]_i_10_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_11 
        (.I0(Q[5]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .O(\ALU_Result[7]_i_11_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_12 
        (.I0(Q[4]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .O(\ALU_Result[7]_i_12_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_13 
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .O(\ALU_Result[7]_i_13_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_14 
        (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .O(\ALU_Result[7]_i_14_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_15 
        (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .O(\ALU_Result[7]_i_15_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_16 
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .O(\ALU_Result[7]_i_16_n_0 ));
   LUT4 #(
     .INIT(16'hBBBA)) 
@@ -989,45 +1046,45 @@ module design_1_arithmetic_operations_0_1_ALU
   LUT6 #(
     .INIT(64'h2002022222282880)) 
     \ALU_Result[7]_i_3 
-       (.I0(\axi_rdata_reg[7]_0 [3]),
-        .I1(\axi_rdata_reg[7]_0 [1]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
-        .I3(\axi_rdata_reg[7] [7]),
+       (.I0(\axi_rdata_reg[8]_0 [3]),
+        .I1(\axi_rdata_reg[8]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
+        .I3(\axi_rdata_reg[8] [7]),
         .I4(Q[7]),
-        .I5(\axi_rdata_reg[7]_0 [2]),
+        .I5(\axi_rdata_reg[8]_0 [2]),
         .O(\ALU_Result[7]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hABAAEFAAEFAAEFAA)) 
     \ALU_Result[7]_i_4 
-       (.I0(\axi_rdata_reg[7]_0 [3]),
-        .I1(\axi_rdata_reg[7]_0 [0]),
+       (.I0(\axi_rdata_reg[8]_0 [3]),
+        .I1(\axi_rdata_reg[8]_0 [0]),
         .I2(Q[6]),
-        .I3(\axi_rdata_reg[7]_0 [2]),
-        .I4(\axi_rdata_reg[7]_0 [1]),
+        .I3(\axi_rdata_reg[8]_0 [2]),
+        .I4(\axi_rdata_reg[8]_0 [1]),
         .I5(Q[0]),
         .O(\ALU_Result[7]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h8C80)) 
     \ALU_Result[7]_i_5 
        (.I0(i___7_carry_i_1_n_0),
-        .I1(\axi_rdata_reg[7]_0 [1]),
-        .I2(\axi_rdata_reg[7]_0 [0]),
+        .I1(\axi_rdata_reg[8]_0 [1]),
+        .I2(\axi_rdata_reg[8]_0 [0]),
         .I3(\ALU_Result0_inferred__0/i___35_carry__0_n_7 ),
         .O(\ALU_Result[7]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'hBABBBAAA)) 
     \ALU_Result[7]_i_6 
-       (.I0(\axi_rdata_reg[7]_0 [2]),
-        .I1(\axi_rdata_reg[7]_0 [1]),
+       (.I0(\axi_rdata_reg[8]_0 [2]),
+        .I1(\axi_rdata_reg[8]_0 [1]),
         .I2(data1[7]),
-        .I3(\axi_rdata_reg[7]_0 [0]),
+        .I3(\axi_rdata_reg[8]_0 [0]),
         .I4(data0[7]),
         .O(\ALU_Result[7]_i_6_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ALU_Result[7]_i_9 
        (.I0(Q[7]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .O(\ALU_Result[7]_i_9_n_0 ));
   FDCE \ALU_Result_reg[0] 
        (.C(s00_axi_aclk),
@@ -1039,7 +1096,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[0]_i_2_n_0 ),
         .I1(\ALU_Result[0]_i_3_n_0 ),
         .O(ALU_Result_0[0]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   FDCE \ALU_Result_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\ALU_Result[7]_i_1_n_0 ),
@@ -1050,7 +1107,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[1]_i_2_n_0 ),
         .I1(\ALU_Result[1]_i_3_n_0 ),
         .O(ALU_Result_0[1]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   FDCE \ALU_Result_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\ALU_Result[7]_i_1_n_0 ),
@@ -1061,7 +1118,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[2]_i_2_n_0 ),
         .I1(\ALU_Result[2]_i_3_n_0 ),
         .O(ALU_Result_0[2]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   FDCE \ALU_Result_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\ALU_Result[7]_i_1_n_0 ),
@@ -1072,7 +1129,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[3]_i_2_n_0 ),
         .I1(\ALU_Result[3]_i_3_n_0 ),
         .O(ALU_Result_0[3]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   FDCE \ALU_Result_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\ALU_Result[7]_i_1_n_0 ),
@@ -1083,7 +1140,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[4]_i_2_n_0 ),
         .I1(\ALU_Result[4]_i_3_n_0 ),
         .O(ALU_Result_0[4]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   CARRY4 \ALU_Result_reg[4]_i_5 
        (.CI(i___211_carry_i_27_n_0),
         .CO({\NLW_ALU_Result_reg[4]_i_5_CO_UNCONNECTED [3:2],data3[4],\ALU_Result_reg[4]_i_5_n_3 }),
@@ -1101,7 +1158,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[5]_i_2_n_0 ),
         .I1(\ALU_Result[5]_i_3_n_0 ),
         .O(ALU_Result_0[5]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   CARRY4 \ALU_Result_reg[5]_i_5 
        (.CI(\ALU_Result_reg[5]_i_6_n_0 ),
         .CO({\NLW_ALU_Result_reg[5]_i_5_CO_UNCONNECTED [3:2],data3[5],\ALU_Result_reg[5]_i_5_n_3 }),
@@ -1126,7 +1183,7 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result[6]_i_2_n_0 ),
         .I1(\ALU_Result[6]_i_3_n_0 ),
         .O(ALU_Result_0[6]),
-        .S(\axi_rdata_reg[7]_0 [3]));
+        .S(\axi_rdata_reg[8]_0 [3]));
   FDCE \ALU_Result_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\ALU_Result[7]_i_1_n_0 ),
@@ -1145,7 +1202,7 @@ module design_1_arithmetic_operations_0_1_ALU
         .CO({\ALU_Result_reg[7]_i_8_n_0 ,\ALU_Result_reg[7]_i_8_n_1 ,\ALU_Result_reg[7]_i_8_n_2 ,\ALU_Result_reg[7]_i_8_n_3 }),
         .CYINIT(1'b0),
         .DI(Q[3:0]),
-        .O({data0[3:1],\NLW_ALU_Result_reg[7]_i_8_O_UNCONNECTED [0]}),
+        .O(data0[3:0]),
         .S({\ALU_Result[7]_i_13_n_0 ,\ALU_Result[7]_i_14_n_0 ,\ALU_Result[7]_i_15_n_0 ,\ALU_Result[7]_i_16_n_0 }));
   FDCE ALU_sel_valid_d1_reg
        (.C(s00_axi_aclk),
@@ -1159,6 +1216,12 @@ module design_1_arithmetic_operations_0_1_ALU
         .CLR(SR),
         .D(ALU_sel_valid_d1),
         .Q(ALU_sel_valid_d2));
+  FDRE Carryout_reg
+       (.C(s00_axi_aclk),
+        .CE(s00_axi_aresetn),
+        .D(p_1_in),
+        .Q(Carryout),
+        .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
     axi_awready_i_1
@@ -1167,114 +1230,93 @@ module design_1_arithmetic_operations_0_1_ALU
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[0]_i_1 
-       (.I0(ALU_Result[0]),
+       (.I0(ALU_Out[0]),
         .I1(Q[0]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [0]),
+        .I3(\axi_rdata_reg[8] [0]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [0]),
+        .I5(\axi_rdata_reg[8]_0 [0]),
         .O(D[0]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[1]_i_1 
-       (.I0(ALU_Result[1]),
+       (.I0(ALU_Out[1]),
         .I1(Q[1]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [1]),
+        .I5(\axi_rdata_reg[8]_0 [1]),
         .O(D[1]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[2]_i_1 
-       (.I0(ALU_Result[2]),
+       (.I0(ALU_Out[2]),
         .I1(Q[2]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [2]),
+        .I3(\axi_rdata_reg[8] [2]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [2]),
+        .I5(\axi_rdata_reg[8]_0 [2]),
         .O(D[2]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_10 
-       (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7] [2]),
-        .O(\axi_rdata[31]_i_10_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_11 
-       (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [1]),
-        .O(\axi_rdata[31]_i_11_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_12 
-       (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [0]),
-        .O(\axi_rdata[31]_i_12_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_9 
-       (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [3]),
-        .O(\axi_rdata[31]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[3]_i_1 
-       (.I0(ALU_Result[3]),
+       (.I0(ALU_Out[3]),
         .I1(Q[3]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [3]),
+        .I3(\axi_rdata_reg[8] [3]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [3]),
+        .I5(\axi_rdata_reg[8]_0 [3]),
         .O(D[3]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[4]_i_1 
-       (.I0(ALU_Result[4]),
+       (.I0(ALU_Out[4]),
         .I1(Q[4]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [4]),
+        .I3(\axi_rdata_reg[8] [4]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [4]),
+        .I5(\axi_rdata_reg[8]_0 [4]),
         .O(D[4]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[5]_i_1 
-       (.I0(ALU_Result[5]),
+       (.I0(ALU_Out[5]),
         .I1(Q[5]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [5]),
+        .I3(\axi_rdata_reg[8] [5]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [5]),
+        .I5(\axi_rdata_reg[8]_0 [5]),
         .O(D[5]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[6]_i_1 
-       (.I0(ALU_Result[6]),
+       (.I0(ALU_Out[6]),
         .I1(Q[6]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [6]),
+        .I3(\axi_rdata_reg[8] [6]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [6]),
+        .I5(\axi_rdata_reg[8]_0 [6]),
         .O(D[6]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[7]_i_1 
-       (.I0(ALU_Result[7]),
+       (.I0(ALU_Out[7]),
         .I1(Q[7]),
         .I2(axi_araddr[0]),
-        .I3(\axi_rdata_reg[7] [7]),
+        .I3(\axi_rdata_reg[8] [7]),
         .I4(axi_araddr[1]),
-        .I5(\axi_rdata_reg[7]_0 [7]),
+        .I5(\axi_rdata_reg[8]_0 [7]),
         .O(D[7]));
-  CARRY4 \axi_rdata_reg[31]_i_4 
-       (.CI(1'b0),
-        .CO({CO,\axi_rdata_reg[31]_i_4_n_1 ,\axi_rdata_reg[31]_i_4_n_2 ,\axi_rdata_reg[31]_i_4_n_3 }),
-        .CYINIT(1'b0),
-        .DI(Q[3:0]),
-        .O({\NLW_axi_rdata_reg[31]_i_4_O_UNCONNECTED [3:1],data0[0]}),
-        .S({\axi_rdata[31]_i_9_n_0 ,\axi_rdata[31]_i_10_n_0 ,\axi_rdata[31]_i_11_n_0 ,\axi_rdata[31]_i_12_n_0 }));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \axi_rdata[8]_i_1 
+       (.I0(Carryout),
+        .I1(Q[8]),
+        .I2(axi_araddr[0]),
+        .I3(\axi_rdata_reg[8] [8]),
+        .I4(axi_araddr[1]),
+        .I5(\axi_rdata_reg[8]_0 [8]),
+        .O(D[8]));
   CARRY4 gtOp_carry
        (.CI(1'b0),
         .CO({data14,gtOp_carry_n_1,gtOp_carry_n_2,gtOp_carry_n_3}),
@@ -1286,74 +1328,74 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(16'h22B2)) 
     gtOp_carry_i_1
        (.I0(Q[7]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(Q[6]),
-        .I3(\axi_rdata_reg[7] [6]),
+        .I3(\axi_rdata_reg[8] [6]),
         .O(gtOp_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     gtOp_carry_i_2
        (.I0(Q[5]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(Q[4]),
-        .I3(\axi_rdata_reg[7] [4]),
+        .I3(\axi_rdata_reg[8] [4]),
         .O(gtOp_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     gtOp_carry_i_3
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(Q[2]),
-        .I3(\axi_rdata_reg[7] [2]),
+        .I3(\axi_rdata_reg[8] [2]),
         .O(gtOp_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     gtOp_carry_i_4
        (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(Q[0]),
-        .I3(\axi_rdata_reg[7] [0]),
+        .I3(\axi_rdata_reg[8] [0]),
         .O(gtOp_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     gtOp_carry_i_5
-       (.I0(\axi_rdata_reg[7] [7]),
+       (.I0(\axi_rdata_reg[8] [7]),
         .I1(Q[7]),
-        .I2(\axi_rdata_reg[7] [6]),
+        .I2(\axi_rdata_reg[8] [6]),
         .I3(Q[6]),
         .O(gtOp_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     gtOp_carry_i_6
-       (.I0(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [5]),
         .I1(Q[5]),
-        .I2(\axi_rdata_reg[7] [4]),
+        .I2(\axi_rdata_reg[8] [4]),
         .I3(Q[4]),
         .O(gtOp_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     gtOp_carry_i_7
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(Q[3]),
-        .I2(\axi_rdata_reg[7] [2]),
+        .I2(\axi_rdata_reg[8] [2]),
         .I3(Q[2]),
         .O(gtOp_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     gtOp_carry_i_8
-       (.I0(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [1]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [0]),
+        .I2(\axi_rdata_reg[8] [0]),
         .I3(Q[0]),
         .O(gtOp_carry_i_8_n_0));
   LUT6 #(
     .INIT(64'hF888800080008000)) 
     i___0_carry__0_i_1
-       (.I0(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8] [2]),
         .I1(Q[3]),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[4]),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[5]),
         .O(i___0_carry__0_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
@@ -1361,40 +1403,40 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(4'h8)) 
     i___0_carry__0_i_10
        (.I0(Q[4]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .O(i___0_carry__0_i_10_n_0));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     i___0_carry__0_i_11
        (.I0(Q[4]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .O(i___0_carry__0_i_11_n_0));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h8)) 
     i___0_carry__0_i_12
        (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .O(i___0_carry__0_i_12_n_0));
   LUT6 #(
     .INIT(64'hF888800080008000)) 
     i___0_carry__0_i_2
-       (.I0(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8] [2]),
         .I1(Q[2]),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[3]),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[4]),
         .O(i___0_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'hF888800080008000)) 
     i___0_carry__0_i_3
-       (.I0(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8] [2]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[2]),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[3]),
         .O(i___0_carry__0_i_3_n_0));
   LUT6 #(
@@ -1402,9 +1444,9 @@ module design_1_arithmetic_operations_0_1_ALU
     i___0_carry__0_i_4
        (.I0(i___0_carry__0_i_8_n_0),
         .I1(Q[5]),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[4]),
-        .I4(\axi_rdata_reg[7] [2]),
+        .I4(\axi_rdata_reg[8] [2]),
         .I5(i___0_carry__0_i_9_n_0),
         .O(i___0_carry__0_i_4_n_0));
   LUT6 #(
@@ -1412,19 +1454,19 @@ module design_1_arithmetic_operations_0_1_ALU
     i___0_carry__0_i_5
        (.I0(i___0_carry__0_i_1_n_0),
         .I1(i___0_carry__0_i_10_n_0),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[5]),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[6]),
         .O(i___0_carry__0_i_5_n_0));
   LUT6 #(
     .INIT(64'h6A95956A956A956A)) 
     i___0_carry__0_i_6
        (.I0(i___0_carry__0_i_2_n_0),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(Q[3]),
         .I3(i___0_carry__0_i_11_n_0),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[5]),
         .O(i___0_carry__0_i_6_n_0));
   LUT6 #(
@@ -1432,59 +1474,59 @@ module design_1_arithmetic_operations_0_1_ALU
     i___0_carry__0_i_7
        (.I0(i___0_carry__0_i_3_n_0),
         .I1(i___0_carry__0_i_12_n_0),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[3]),
-        .I4(\axi_rdata_reg[7] [0]),
+        .I4(\axi_rdata_reg[8] [0]),
         .I5(Q[4]),
         .O(i___0_carry__0_i_7_n_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     i___0_carry__0_i_8
-       (.I0(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [0]),
         .I1(Q[6]),
         .O(i___0_carry__0_i_8_n_0));
   LUT6 #(
     .INIT(64'h7888877787778777)) 
     i___0_carry__0_i_9
-       (.I0(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [0]),
         .I1(Q[7]),
         .I2(Q[6]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .I4(Q[5]),
-        .I5(\axi_rdata_reg[7] [2]),
+        .I5(\axi_rdata_reg[8] [2]),
         .O(i___0_carry__0_i_9_n_0));
   LUT6 #(
     .INIT(64'h8777788878887888)) 
     i___0_carry_i_1
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[2]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .I4(Q[1]),
-        .I5(\axi_rdata_reg[7] [2]),
+        .I5(\axi_rdata_reg[8] [2]),
         .O(i___0_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h7888)) 
     i___0_carry_i_2
-       (.I0(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [1]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [2]),
+        .I2(\axi_rdata_reg[8] [2]),
         .I3(Q[0]),
         .O(i___0_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i___0_carry_i_3
-       (.I0(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [1]),
         .I1(Q[0]),
         .O(i___0_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h6A3F953F6AC06AC0)) 
     i___0_carry_i_4
        (.I0(Q[2]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[3]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .I4(Q[0]),
         .I5(i___0_carry_i_8_n_0),
         .O(i___0_carry_i_4_n_0));
@@ -1492,24 +1534,24 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(64'h8777788878887888)) 
     i___0_carry_i_5
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(Q[1]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .I4(Q[2]),
-        .I5(\axi_rdata_reg[7] [0]),
+        .I5(\axi_rdata_reg[8] [0]),
         .O(i___0_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h7888)) 
     i___0_carry_i_6
        (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[0]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .O(i___0_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i___0_carry_i_7
-       (.I0(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [0]),
         .I1(Q[0]),
         .O(i___0_carry_i_7_n_0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
@@ -1517,7 +1559,7 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(4'h8)) 
     i___0_carry_i_8
        (.I0(Q[1]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .O(i___0_carry_i_8_n_0));
   CARRY4 i___211_carry__0_i_1
        (.CI(i___211_carry_i_2_n_0),
@@ -1530,56 +1572,56 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry__0_i_2
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(i___211_carry__0_i_1_n_4),
         .O(i___211_carry__0_i_2_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_3
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(i___211_carry__0_i_1_n_5),
         .O(i___211_carry__0_i_3_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_4
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___211_carry__0_i_1_n_6),
         .O(i___211_carry__0_i_4_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_5
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(i___211_carry__0_i_1_n_7),
         .O(i___211_carry__0_i_5_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_6
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(i___211_carry_i_8_n_5),
         .O(i___211_carry__0_i_6_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_7
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___211_carry_i_8_n_6),
         .O(i___211_carry__0_i_7_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_8
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(i___211_carry_i_8_n_7),
         .O(i___211_carry__0_i_8_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry__0_i_9
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(i___211_carry_i_11_n_4),
         .O(i___211_carry__0_i_9_n_0));
   LUT2 #(
@@ -1599,7 +1641,7 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_10
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(i___211_carry_i_8_n_4),
         .O(i___211_carry_i_10_n_0));
   CARRY4 i___211_carry_i_11
@@ -1613,21 +1655,21 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_12
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(i___211_carry_i_11_n_5),
         .O(i___211_carry_i_12_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_13
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(i___211_carry_i_11_n_6),
         .O(i___211_carry_i_13_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_14
        (.I0(data3[2]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[1]),
         .O(i___211_carry_i_14_n_0));
   CARRY4 i___211_carry_i_15
@@ -1654,7 +1696,7 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_18
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(i___211_carry_i_16_n_4),
         .O(i___211_carry_i_18_n_0));
   CARRY4 i___211_carry_i_19
@@ -1675,49 +1717,49 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_20
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(i___211_carry_i_16_n_5),
         .O(i___211_carry_i_20_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_21
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___211_carry_i_16_n_6),
         .O(i___211_carry_i_21_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_22
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(i___211_carry_i_16_n_7),
         .O(i___211_carry_i_22_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_23
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(i___211_carry_i_19_n_4),
         .O(i___211_carry_i_23_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_24
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(i___211_carry_i_19_n_5),
         .O(i___211_carry_i_24_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_25
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(i___211_carry_i_19_n_6),
         .O(i___211_carry_i_25_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_26
        (.I0(data3[3]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[2]),
         .O(i___211_carry_i_26_n_0));
   CARRY4 i___211_carry_i_27
@@ -1737,14 +1779,14 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_29
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [7]),
+        .I1(\axi_rdata_reg[8] [7]),
         .I2(i___211_carry_i_27_n_4),
         .O(i___211_carry_i_29_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_3
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(i___211_carry_i_2_n_4),
         .O(i___211_carry_i_3_n_0));
   CARRY4 i___211_carry_i_30
@@ -1758,49 +1800,49 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_31
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(i___211_carry_i_27_n_5),
         .O(i___211_carry_i_31_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_32
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___211_carry_i_27_n_6),
         .O(i___211_carry_i_32_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_33
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(i___211_carry_i_27_n_7),
         .O(i___211_carry_i_33_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_34
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(i___211_carry_i_30_n_4),
         .O(i___211_carry_i_34_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_35
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(i___211_carry_i_30_n_5),
         .O(i___211_carry_i_35_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_36
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(i___211_carry_i_30_n_6),
         .O(i___211_carry_i_36_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_37
        (.I0(data3[4]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[3]),
         .O(i___211_carry_i_37_n_0));
   CARRY4 i___211_carry_i_38
@@ -1814,91 +1856,91 @@ module design_1_arithmetic_operations_0_1_ALU
     .INIT(8'h96)) 
     i___211_carry_i_39
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [6]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(\ALU_Result_reg[5]_i_6_n_5 ),
         .O(i___211_carry_i_39_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_4
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(i___211_carry_i_2_n_5),
         .O(i___211_carry_i_4_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_40
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(\ALU_Result_reg[5]_i_6_n_6 ),
         .O(i___211_carry_i_40_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_41
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .I2(\ALU_Result_reg[5]_i_6_n_7 ),
         .O(i___211_carry_i_41_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_42
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .I2(i___211_carry_i_38_n_4),
         .O(i___211_carry_i_42_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_43
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(i___211_carry_i_38_n_5),
         .O(i___211_carry_i_43_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_44
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(i___211_carry_i_38_n_6),
         .O(i___211_carry_i_44_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_45
        (.I0(data3[5]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[4]),
         .O(i___211_carry_i_45_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_46
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [2]),
+        .I1(\axi_rdata_reg[8] [2]),
         .I2(\ALU_Result0_inferred__4/i___7_carry_n_6 ),
         .O(i___211_carry_i_46_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_47
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(\ALU_Result0_inferred__4/i___7_carry_n_7 ),
         .O(i___211_carry_i_47_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_48
        (.I0(data3[6]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[5]),
         .O(i___211_carry_i_48_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_5
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(i___211_carry_i_2_n_6),
         .O(i___211_carry_i_5_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___211_carry_i_6
        (.I0(data3[1]),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[0]),
         .O(i___211_carry_i_6_n_0));
   CARRY4 i___211_carry_i_7
@@ -1926,44 +1968,44 @@ module design_1_arithmetic_operations_0_1_ALU
     i___22_carry__0_i_1
        (.I0(i___22_carry_i_8_n_0),
         .I1(Q[2]),
-        .I2(\axi_rdata_reg[7] [4]),
+        .I2(\axi_rdata_reg[8] [4]),
         .I3(Q[1]),
-        .I4(\axi_rdata_reg[7] [5]),
+        .I4(\axi_rdata_reg[8] [5]),
         .I5(i___22_carry__0_i_2_n_0),
         .O(i___22_carry__0_i_1_n_0));
   LUT6 #(
     .INIT(64'h7888877787778777)) 
     i___22_carry__0_i_2
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(Q[4]),
         .I2(Q[3]),
-        .I3(\axi_rdata_reg[7] [4]),
+        .I3(\axi_rdata_reg[8] [4]),
         .I4(Q[2]),
-        .I5(\axi_rdata_reg[7] [5]),
+        .I5(\axi_rdata_reg[8] [5]),
         .O(i___22_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h8777788878887888)) 
     i___22_carry_i_1
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(Q[3]),
         .I2(Q[2]),
-        .I3(\axi_rdata_reg[7] [4]),
+        .I3(\axi_rdata_reg[8] [4]),
         .I4(Q[1]),
-        .I5(\axi_rdata_reg[7] [5]),
+        .I5(\axi_rdata_reg[8] [5]),
         .O(i___22_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h7888)) 
     i___22_carry_i_2
-       (.I0(\axi_rdata_reg[7] [4]),
+       (.I0(\axi_rdata_reg[8] [4]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [5]),
+        .I2(\axi_rdata_reg[8] [5]),
         .I3(Q[0]),
         .O(i___22_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i___22_carry_i_3
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [4]),
+        .I1(\axi_rdata_reg[8] [4]),
         .O(i___22_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h693366CC66CC66CC)) 
@@ -1971,40 +2013,40 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(Q[2]),
         .I1(i___22_carry_i_8_n_0),
         .I2(Q[0]),
-        .I3(\axi_rdata_reg[7] [4]),
+        .I3(\axi_rdata_reg[8] [4]),
         .I4(Q[1]),
-        .I5(\axi_rdata_reg[7] [5]),
+        .I5(\axi_rdata_reg[8] [5]),
         .O(i___22_carry_i_4_n_0));
   LUT6 #(
     .INIT(64'h8777788878887888)) 
     i___22_carry_i_5
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [5]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(Q[1]),
-        .I3(\axi_rdata_reg[7] [4]),
-        .I4(\axi_rdata_reg[7] [3]),
+        .I3(\axi_rdata_reg[8] [4]),
+        .I4(\axi_rdata_reg[8] [3]),
         .I5(Q[2]),
         .O(i___22_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h7888)) 
     i___22_carry_i_6
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(Q[1]),
-        .I2(\axi_rdata_reg[7] [4]),
+        .I2(\axi_rdata_reg[8] [4]),
         .I3(Q[0]),
         .O(i___22_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i___22_carry_i_7
        (.I0(Q[0]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .O(i___22_carry_i_7_n_0));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     i___22_carry_i_8
        (.I0(Q[3]),
-        .I1(\axi_rdata_reg[7] [3]),
+        .I1(\axi_rdata_reg[8] [3]),
         .O(i___22_carry_i_8_n_0));
   LUT5 #(
     .INIT(32'h69999666)) 
@@ -2012,14 +2054,14 @@ module design_1_arithmetic_operations_0_1_ALU
        (.I0(\ALU_Result0_inferred__0/i___22_carry__0_n_7 ),
         .I1(\ALU_Result0_inferred__0/i___0_carry__0_n_4 ),
         .I2(Q[0]),
-        .I3(\axi_rdata_reg[7] [7]),
+        .I3(\axi_rdata_reg[8] [7]),
         .I4(i___35_carry__0_i_2_n_0),
         .O(i___35_carry__0_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7888)) 
     i___35_carry__0_i_2
-       (.I0(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [6]),
         .I1(Q[1]),
         .I2(\ALU_Result0_inferred__0/i___22_carry_n_4 ),
         .I3(\ALU_Result0_inferred__0/i___0_carry__0_n_5 ),
@@ -2035,7 +2077,7 @@ module design_1_arithmetic_operations_0_1_ALU
     i___35_carry_i_2
        (.I0(\ALU_Result0_inferred__0/i___22_carry_n_4 ),
         .I1(\ALU_Result0_inferred__0/i___0_carry__0_n_5 ),
-        .I2(\axi_rdata_reg[7] [6]),
+        .I2(\axi_rdata_reg[8] [6]),
         .I3(Q[0]),
         .O(i___35_carry_i_2_n_0));
   LUT2 #(
@@ -2059,166 +2101,166 @@ module design_1_arithmetic_operations_0_1_ALU
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry__0_i_1
-       (.I0(\axi_rdata_reg[7] [7]),
+       (.I0(\axi_rdata_reg[8] [7]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry__0_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hFFAE)) 
     i___7_carry__0_i_10
-       (.I0(\axi_rdata_reg[7] [2]),
-        .I1(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [2]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[7]),
-        .I3(\axi_rdata_reg[7] [1]),
+        .I3(\axi_rdata_reg[8] [1]),
         .O(i___7_carry__0_i_10_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry__0_i_2
-       (.I0(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [6]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry__0_i_3
-       (.I0(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [5]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry__0_i_4
-       (.I0(\axi_rdata_reg[7] [4]),
+       (.I0(\axi_rdata_reg[8] [4]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'hA957)) 
     i___7_carry__0_i_5
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___7_carry_i_9_n_0),
-        .I3(\axi_rdata_reg[7] [6]),
+        .I3(\axi_rdata_reg[8] [6]),
         .O(i___7_carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'hC33D)) 
     i___7_carry__0_i_6
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [6]),
         .I2(i___7_carry_i_9_n_0),
-        .I3(\axi_rdata_reg[7] [5]),
+        .I3(\axi_rdata_reg[8] [5]),
         .O(i___7_carry__0_i_6_n_0));
   LUT5 #(
     .INIT(32'hCC3333CD)) 
     i___7_carry__0_i_7
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [5]),
-        .I2(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [5]),
+        .I2(\axi_rdata_reg[8] [6]),
         .I3(i___7_carry__0_i_9_n_0),
-        .I4(\axi_rdata_reg[7] [4]),
+        .I4(\axi_rdata_reg[8] [4]),
         .O(i___7_carry__0_i_7_n_0));
   LUT6 #(
     .INIT(64'hF0F00F0F0F0FF0F1)) 
     i___7_carry__0_i_8
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [5]),
-        .I2(\axi_rdata_reg[7] [4]),
-        .I3(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [5]),
+        .I2(\axi_rdata_reg[8] [4]),
+        .I3(\axi_rdata_reg[8] [6]),
         .I4(i___7_carry__0_i_10_n_0),
-        .I5(\axi_rdata_reg[7] [3]),
+        .I5(\axi_rdata_reg[8] [3]),
         .O(i___7_carry__0_i_8_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFFFEFEE)) 
     i___7_carry__0_i_9
-       (.I0(\axi_rdata_reg[7] [3]),
-        .I1(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [3]),
+        .I1(\axi_rdata_reg[8] [1]),
         .I2(Q[7]),
-        .I3(\axi_rdata_reg[7] [0]),
-        .I4(\axi_rdata_reg[7] [2]),
+        .I3(\axi_rdata_reg[8] [0]),
+        .I4(\axi_rdata_reg[8] [2]),
         .O(i___7_carry__0_i_9_n_0));
   LUT4 #(
     .INIT(16'h0001)) 
     i___7_carry__1_i_1
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___7_carry_i_9_n_0),
-        .I3(\axi_rdata_reg[7] [6]),
+        .I3(\axi_rdata_reg[8] [6]),
         .O(i___7_carry__1_i_1_n_0));
   LUT4 #(
     .INIT(16'h01FF)) 
     i___7_carry__1_i_2
-       (.I0(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [6]),
         .I1(i___7_carry_i_9_n_0),
-        .I2(\axi_rdata_reg[7] [5]),
-        .I3(\axi_rdata_reg[7] [7]),
+        .I2(\axi_rdata_reg[8] [5]),
+        .I3(\axi_rdata_reg[8] [7]),
         .O(i___7_carry__1_i_2_n_0));
   LUT4 #(
     .INIT(16'h0001)) 
     i___7_carry_i_1
-       (.I0(\axi_rdata_reg[7] [7]),
-        .I1(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [7]),
+        .I1(\axi_rdata_reg[8] [5]),
         .I2(i___7_carry_i_9_n_0),
-        .I3(\axi_rdata_reg[7] [6]),
+        .I3(\axi_rdata_reg[8] [6]),
         .O(i___7_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry_i_2
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry_i_3
-       (.I0(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8] [2]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     i___7_carry_i_4
-       (.I0(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [1]),
         .I1(i___7_carry_i_1_n_0),
         .O(i___7_carry_i_4_n_0));
   LUT6 #(
     .INIT(64'h6966696996999696)) 
     i___7_carry_i_5
        (.I0(i___7_carry_i_1_n_0),
-        .I1(\axi_rdata_reg[7] [3]),
-        .I2(\axi_rdata_reg[7] [1]),
+        .I1(\axi_rdata_reg[8] [3]),
+        .I2(\axi_rdata_reg[8] [1]),
         .I3(Q[7]),
-        .I4(\axi_rdata_reg[7] [0]),
-        .I5(\axi_rdata_reg[7] [2]),
+        .I4(\axi_rdata_reg[8] [0]),
+        .I5(\axi_rdata_reg[8] [2]),
         .O(i___7_carry_i_5_n_0));
   LUT5 #(
     .INIT(32'h99696696)) 
     i___7_carry_i_6
        (.I0(i___7_carry_i_1_n_0),
-        .I1(\axi_rdata_reg[7] [2]),
-        .I2(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [2]),
+        .I2(\axi_rdata_reg[8] [0]),
         .I3(Q[7]),
-        .I4(\axi_rdata_reg[7] [1]),
+        .I4(\axi_rdata_reg[8] [1]),
         .O(i___7_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h6996)) 
     i___7_carry_i_7
        (.I0(i___7_carry_i_1_n_0),
-        .I1(\axi_rdata_reg[7] [1]),
-        .I2(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [1]),
+        .I2(\axi_rdata_reg[8] [0]),
         .I3(Q[7]),
         .O(i___7_carry_i_7_n_0));
   LUT3 #(
     .INIT(8'h96)) 
     i___7_carry_i_8
        (.I0(i___7_carry_i_1_n_0),
-        .I1(\axi_rdata_reg[7] [0]),
+        .I1(\axi_rdata_reg[8] [0]),
         .I2(Q[6]),
         .O(i___7_carry_i_8_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFEEFE)) 
     i___7_carry_i_9
-       (.I0(\axi_rdata_reg[7] [4]),
-        .I1(\axi_rdata_reg[7] [2]),
-        .I2(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [4]),
+        .I1(\axi_rdata_reg[8] [2]),
+        .I2(\axi_rdata_reg[8] [0]),
         .I3(Q[7]),
-        .I4(\axi_rdata_reg[7] [1]),
-        .I5(\axi_rdata_reg[7] [3]),
+        .I4(\axi_rdata_reg[8] [1]),
+        .I5(\axi_rdata_reg[8] [3]),
         .O(i___7_carry_i_9_n_0));
   CARRY4 minusOp_carry
        (.CI(1'b0),
@@ -2237,51 +2279,119 @@ module design_1_arithmetic_operations_0_1_ALU
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry__0_i_1
-       (.I0(\axi_rdata_reg[7] [7]),
+       (.I0(\axi_rdata_reg[8] [7]),
         .I1(Q[7]),
         .O(minusOp_carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry__0_i_2
-       (.I0(\axi_rdata_reg[7] [6]),
+       (.I0(\axi_rdata_reg[8] [6]),
         .I1(Q[6]),
         .O(minusOp_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry__0_i_3
-       (.I0(\axi_rdata_reg[7] [5]),
+       (.I0(\axi_rdata_reg[8] [5]),
         .I1(Q[5]),
         .O(minusOp_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry__0_i_4
-       (.I0(\axi_rdata_reg[7] [4]),
+       (.I0(\axi_rdata_reg[8] [4]),
         .I1(Q[4]),
         .O(minusOp_carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry_i_1
-       (.I0(\axi_rdata_reg[7] [3]),
+       (.I0(\axi_rdata_reg[8] [3]),
         .I1(Q[3]),
         .O(minusOp_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry_i_2
-       (.I0(\axi_rdata_reg[7] [2]),
+       (.I0(\axi_rdata_reg[8] [2]),
         .I1(Q[2]),
         .O(minusOp_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry_i_3
-       (.I0(\axi_rdata_reg[7] [1]),
+       (.I0(\axi_rdata_reg[8] [1]),
         .I1(Q[1]),
         .O(minusOp_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h9)) 
     minusOp_carry_i_4
-       (.I0(\axi_rdata_reg[7] [0]),
+       (.I0(\axi_rdata_reg[8] [0]),
         .I1(Q[0]),
         .O(minusOp_carry_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_10 
+       (.I0(Q[0]),
+        .I1(\axi_rdata_reg[8] [0]),
+        .O(\tmp[8]_i_10_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_3 
+       (.I0(Q[7]),
+        .I1(\axi_rdata_reg[8] [7]),
+        .O(\tmp[8]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_4 
+       (.I0(Q[6]),
+        .I1(\axi_rdata_reg[8] [6]),
+        .O(\tmp[8]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_5 
+       (.I0(Q[5]),
+        .I1(\axi_rdata_reg[8] [5]),
+        .O(\tmp[8]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_6 
+       (.I0(Q[4]),
+        .I1(\axi_rdata_reg[8] [4]),
+        .O(\tmp[8]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_7 
+       (.I0(Q[3]),
+        .I1(\axi_rdata_reg[8] [3]),
+        .O(\tmp[8]_i_7_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_8 
+       (.I0(Q[2]),
+        .I1(\axi_rdata_reg[8] [2]),
+        .O(\tmp[8]_i_8_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \tmp[8]_i_9 
+       (.I0(Q[1]),
+        .I1(\axi_rdata_reg[8] [1]),
+        .O(\tmp[8]_i_9_n_0 ));
+  FDCE \tmp_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(plusOp0_out),
+        .Q(p_1_in));
+  CARRY4 \tmp_reg[8]_i_1 
+       (.CI(\tmp_reg[8]_i_2_n_0 ),
+        .CO({plusOp0_out,\tmp_reg[8]_i_1_n_1 ,\tmp_reg[8]_i_1_n_2 ,\tmp_reg[8]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI(Q[7:4]),
+        .O(\NLW_tmp_reg[8]_i_1_O_UNCONNECTED [3:0]),
+        .S({\tmp[8]_i_3_n_0 ,\tmp[8]_i_4_n_0 ,\tmp[8]_i_5_n_0 ,\tmp[8]_i_6_n_0 }));
+  CARRY4 \tmp_reg[8]_i_2 
+       (.CI(1'b0),
+        .CO({\tmp_reg[8]_i_2_n_0 ,\tmp_reg[8]_i_2_n_1 ,\tmp_reg[8]_i_2_n_2 ,\tmp_reg[8]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI(Q[3:0]),
+        .O(\NLW_tmp_reg[8]_i_2_O_UNCONNECTED [3:0]),
+        .S({\tmp[8]_i_7_n_0 ,\tmp[8]_i_8_n_0 ,\tmp[8]_i_9_n_0 ,\tmp[8]_i_10_n_0 }));
 endmodule
 
 (* ORIG_REF_NAME = "arithmetic_operations_v1_0" *) 
@@ -2297,9 +2407,9 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_wdata,
+    s00_axi_aresetn,
     s00_axi_araddr,
     s00_axi_arvalid,
-    s00_axi_aresetn,
     s00_axi_wstrb,
     s00_axi_bready,
     s00_axi_rready);
@@ -2314,9 +2424,9 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input [31:0]s00_axi_wdata;
+  input s00_axi_aresetn;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
   input s00_axi_bready;
   input s00_axi_rready;
@@ -2372,9 +2482,9 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_wdata,
+    s00_axi_aresetn,
     s00_axi_araddr,
     s00_axi_arvalid,
-    s00_axi_aresetn,
     s00_axi_wstrb,
     s00_axi_bready,
     s00_axi_rready);
@@ -2389,15 +2499,14 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input [31:0]s00_axi_wdata;
+  input s00_axi_aresetn;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
   input s00_axi_bready;
   input s00_axi_rready;
 
   wire ALU_0_n_0;
-  wire ALU_0_n_9;
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
   wire S_AXI_WREADY;
@@ -2414,18 +2523,9 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
   wire \axi_awaddr[3]_i_1_n_0 ;
   wire axi_awready0;
   wire axi_bvalid_i_1_n_0;
-  wire \axi_rdata[31]_i_5_n_0 ;
-  wire \axi_rdata[31]_i_6_n_0 ;
-  wire \axi_rdata[31]_i_7_n_0 ;
-  wire \axi_rdata[31]_i_8_n_0 ;
-  wire \axi_rdata_reg[31]_i_3_n_1 ;
-  wire \axi_rdata_reg[31]_i_3_n_2 ;
-  wire \axi_rdata_reg[31]_i_3_n_3 ;
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
   wire [1:0]p_0_in;
-  wire [31:7]p_1_in;
-  wire [8:8]plusOp0_out;
   wire [31:0]reg_data_out;
   wire s00_axi_aclk;
   wire [1:0]s00_axi_araddr;
@@ -2476,6 +2576,10 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
   wire \slv_reg1_reg_n_0_[8] ;
   wire \slv_reg1_reg_n_0_[9] ;
   wire [7:0]slv_reg2;
+  wire \slv_reg2[15]_i_1_n_0 ;
+  wire \slv_reg2[23]_i_1_n_0 ;
+  wire \slv_reg2[31]_i_1_n_0 ;
+  wire \slv_reg2[7]_i_1_n_0 ;
   wire \slv_reg2_reg_n_0_[10] ;
   wire \slv_reg2_reg_n_0_[11] ;
   wire \slv_reg2_reg_n_0_[12] ;
@@ -2502,17 +2606,15 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
   wire \slv_reg2_reg_n_0_[9] ;
   wire slv_reg_rden;
   wire slv_reg_wren__2;
-  wire [3:0]\NLW_axi_rdata_reg[31]_i_3_O_UNCONNECTED ;
 
   design_1_arithmetic_operations_0_1_ALU ALU_0
-       (.CO(ALU_0_n_9),
-        .D(reg_data_out[7:0]),
-        .Q(slv_reg1),
+       (.D(reg_data_out[8:0]),
+        .Q({\slv_reg1_reg_n_0_[8] ,slv_reg1}),
         .SR(ALU_0_n_0),
         .alu_sel_valid(alu_sel_valid),
         .axi_araddr(axi_araddr),
-        .\axi_rdata_reg[7] (slv_reg2),
-        .\axi_rdata_reg[7]_0 (slv_reg0[7:0]),
+        .\axi_rdata_reg[8] ({\slv_reg2_reg_n_0_[8] ,slv_reg2}),
+        .\axi_rdata_reg[8]_0 (slv_reg0[8:0]),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn));
   LUT6 #(
@@ -2857,49 +2959,15 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .I1(s00_axi_arvalid),
         .I2(s00_axi_rvalid),
         .O(slv_reg_rden));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \axi_rdata[31]_i_2 
-       (.I0(plusOp0_out),
-        .I1(\slv_reg1_reg_n_0_[31] ),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg2_reg_n_0_[31] ),
-        .I4(axi_araddr[3]),
-        .I5(slv_reg0[31]),
-        .O(reg_data_out[31]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_5 
-       (.I0(slv_reg1[7]),
-        .I1(slv_reg2[7]),
-        .O(\axi_rdata[31]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_6 
-       (.I0(slv_reg1[6]),
-        .I1(slv_reg2[6]),
-        .O(\axi_rdata[31]_i_6_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_7 
-       (.I0(slv_reg1[5]),
-        .I1(slv_reg2[5]),
-        .O(\axi_rdata[31]_i_7_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \axi_rdata[31]_i_8 
-       (.I0(slv_reg1[4]),
-        .I1(slv_reg2[4]),
-        .O(\axi_rdata[31]_i_8_n_0 ));
   LUT5 #(
     .INIT(32'h30BB3088)) 
-    \axi_rdata[8]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[8] ),
+    \axi_rdata[31]_i_2 
+       (.I0(\slv_reg1_reg_n_0_[31] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg2_reg_n_0_[8] ),
+        .I2(\slv_reg2_reg_n_0_[31] ),
         .I3(axi_araddr[3]),
-        .I4(slv_reg0[8]),
-        .O(reg_data_out[8]));
+        .I4(slv_reg0[31]),
+        .O(reg_data_out[31]));
   LUT5 #(
     .INIT(32'h30BB3088)) 
     \axi_rdata[9]_i_1 
@@ -3059,13 +3127,6 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .D(reg_data_out[31]),
         .Q(s00_axi_rdata[31]),
         .R(ALU_0_n_0));
-  CARRY4 \axi_rdata_reg[31]_i_3 
-       (.CI(ALU_0_n_9),
-        .CO({plusOp0_out,\axi_rdata_reg[31]_i_3_n_1 ,\axi_rdata_reg[31]_i_3_n_2 ,\axi_rdata_reg[31]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI(slv_reg1[7:4]),
-        .O(\NLW_axi_rdata_reg[31]_i_3_O_UNCONNECTED [3:0]),
-        .S({\axi_rdata[31]_i_5_n_0 ,\axi_rdata[31]_i_6_n_0 ,\axi_rdata[31]_i_7_n_0 ,\axi_rdata[31]_i_8_n_0 }));
   FDRE \axi_rdata_reg[3] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
@@ -3593,7 +3654,7 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(s00_axi_wstrb[1]),
         .I3(p_0_in[0]),
-        .O(p_1_in[15]));
+        .O(\slv_reg2[15]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0080)) 
     \slv_reg2[23]_i_1 
@@ -3601,7 +3662,7 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(s00_axi_wstrb[2]),
         .I3(p_0_in[0]),
-        .O(p_1_in[23]));
+        .O(\slv_reg2[23]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0080)) 
     \slv_reg2[31]_i_1 
@@ -3609,7 +3670,7 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(s00_axi_wstrb[3]),
         .I3(p_0_in[0]),
-        .O(p_1_in[31]));
+        .O(\slv_reg2[31]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg2[31]_i_2 
@@ -3625,196 +3686,196 @@ module design_1_arithmetic_operations_0_1_arithmetic_operations_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(s00_axi_wstrb[0]),
         .I3(p_0_in[0]),
-        .O(p_1_in[7]));
+        .O(\slv_reg2[7]_i_1_n_0 ));
   FDRE \slv_reg2_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
         .Q(slv_reg2[0]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[10] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
         .Q(\slv_reg2_reg_n_0_[10] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[11] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
         .Q(\slv_reg2_reg_n_0_[11] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[12] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
         .Q(\slv_reg2_reg_n_0_[12] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[13] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
         .Q(\slv_reg2_reg_n_0_[13] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[14] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
         .Q(\slv_reg2_reg_n_0_[14] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[15] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
         .Q(\slv_reg2_reg_n_0_[15] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[16] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
         .Q(\slv_reg2_reg_n_0_[16] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[17] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(\slv_reg2_reg_n_0_[17] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[18] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(\slv_reg2_reg_n_0_[18] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[19] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(\slv_reg2_reg_n_0_[19] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
         .Q(slv_reg2[1]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[20] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(\slv_reg2_reg_n_0_[20] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[21] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(\slv_reg2_reg_n_0_[21] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[22] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(\slv_reg2_reg_n_0_[22] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[23] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(\slv_reg2_reg_n_0_[23] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[24] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
         .Q(\slv_reg2_reg_n_0_[24] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[25] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
         .Q(\slv_reg2_reg_n_0_[25] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[26] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
         .Q(\slv_reg2_reg_n_0_[26] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[27] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
         .Q(\slv_reg2_reg_n_0_[27] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[28] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
         .Q(\slv_reg2_reg_n_0_[28] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[29] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
         .Q(\slv_reg2_reg_n_0_[29] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
         .Q(slv_reg2[2]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[30] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
         .Q(\slv_reg2_reg_n_0_[30] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[31] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
         .Q(\slv_reg2_reg_n_0_[31] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
         .Q(slv_reg2[3]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
         .Q(slv_reg2[4]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
         .Q(slv_reg2[5]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
         .Q(slv_reg2[6]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
         .Q(slv_reg2[7]),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[8] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
         .Q(\slv_reg2_reg_n_0_[8] ),
         .R(ALU_0_n_0));
   FDRE \slv_reg2_reg[9] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
         .Q(\slv_reg2_reg_n_0_[9] ),
         .R(ALU_0_n_0));

@@ -95,10 +95,10 @@ architecture arch_imp of arithmetic_operations_v1_0_S00_AXI is
 		(
 			RST         	: in std_logic;
 			CLK         	: in std_logic;
-			A_IN           	: in std_logic_vector(31 downto 0); -- 2 inputs 8-bit
-			B_IN           	: in std_logic_vector(31 downto 0); -- 2 inputs 8-bit
+			A           	: in std_logic_vector(7 downto 0); -- 2 inputs 8-bit
+			B           	: in std_logic_vector(7 downto 0); -- 2 inputs 8-bit
 			ALU_SEL_VALID	: in std_logic;
-			ALU_Sel			: in std_logic_vector(31 downto 0); -- 1 input 4-bit for selecting function
+			ALU_Sel			: in std_logic_vector(3 downto 0); -- 1 input 4-bit for selecting function
 			ALU_Out			: out std_logic_vector(7 downto 0); -- 1 output 8-bit 
 			Carryout		: out std_logic -- Carryout flag
 		);
@@ -370,7 +370,7 @@ begin
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (slv_reg0, slv_reg1, slv_reg2, axi_araddr, S_AXI_ARESETN, slv_reg_rden,carry_out,alu_out)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	    -- Address decoding for reading registers
@@ -383,7 +383,7 @@ begin
 	      when b"10" =>
 	        reg_data_out <= slv_reg2;
 	      when b"11" =>
-	        reg_data_out <= carry_out & "00000000000000000000000" & alu_out;
+	        reg_data_out <= "00000000000000000000000"& carry_out & alu_out;
 	      when others =>
 	        reg_data_out  <= (others => '0');
 	    end case;
@@ -419,10 +419,10 @@ begin
 		(
 			RST => S_AXI_ARESETN,
 			CLK => S_AXI_ACLK,
-			A_IN => slv_reg1,
-			B_IN => slv_reg2,
+			A => slv_reg1(7 downto 0),
+			B => slv_reg2(7 downto 0),
 			ALU_SEL_VALID => alu_sel_valid,
-			ALU_Sel => slv_reg0,
+			ALU_Sel => slv_reg0(3 downto 0),
 			ALU_Out => alu_out,
 			Carryout => carry_out
 		);

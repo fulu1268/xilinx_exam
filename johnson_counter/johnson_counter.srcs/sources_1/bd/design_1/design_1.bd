@@ -589,16 +589,16 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m02_couplers": {
+          "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "m00_couplers_to_ps7_0_axi_periph": {
@@ -607,10 +607,16 @@
               "m00_couplers/M_AXI"
             ]
           },
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -625,16 +631,10 @@
               "m02_couplers/M_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "xbar_to_m02_couplers": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           }
         },
@@ -2328,6 +2328,12 @@
           "arithmetic_operations_0/S00_AXI"
         ]
       },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "my_multiplier_0/S00_AXI"
+        ]
+      },
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
@@ -2338,12 +2344,6 @@
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "my_multiplier_0/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {

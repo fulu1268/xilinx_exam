@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Sep 19 20:09:57 2019
-| Host         : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
+| Date         : Fri Sep 20 00:56:47 2019
+| Host         : DESKTOP-B175D9L running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_arithmetic_operations_0_1_utilization_synth.rpt -pb design_1_arithmetic_operations_0_1_utilization_synth.pb
 | Design       : design_1_arithmetic_operations_0_1
 | Device       : 7z020clg400-1
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |  220 |     0 |     53200 |  0.41 |
 |   LUT as Logic          |  220 |     0 |     53200 |  0.41 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  149 |     0 |    106400 |  0.14 |
-|   Register as Flip Flop |  149 |     0 |    106400 |  0.14 |
+| Slice Registers         |  159 |     0 |    106400 |  0.15 |
+|   Register as Flip Flop |  159 |     0 |    106400 |  0.15 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    7 |     0 |     26600 |  0.03 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 10    |          Yes |           - |        Reset |
+| 11    |          Yes |           - |        Reset |
 | 3     |          Yes |         Set |            - |
-| 136   |          Yes |       Reset |            - |
+| 145   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,14 +146,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  136 |        Flop & Latch |
+| FDRE     |  145 |        Flop & Latch |
 | LUT2     |   60 |                 LUT |
 | LUT3     |   52 |                 LUT |
 | LUT6     |   46 |                 LUT |
 | LUT4     |   42 |                 LUT |
 | LUT5     |   40 |                 LUT |
 | CARRY4   |   34 |          CarryLogic |
-| FDCE     |   10 |        Flop & Latch |
+| FDCE     |   11 |        Flop & Latch |
 | MUXF7    |    7 |               MuxFx |
 | FDSE     |    3 |        Flop & Latch |
 | LUT1     |    1 |                 LUT |
