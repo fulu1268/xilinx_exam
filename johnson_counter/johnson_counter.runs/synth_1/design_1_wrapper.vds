@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Sep 20 00:35:55 2019
-# Process ID: 15612
+# Start of session at: Tue Sep 24 02:18:29 2019
+# Process ID: 7476
 # Current directory: D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/design_1_wrapper.vds
@@ -14,26 +14,27 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/dev/xilinx_exam/ip_repo/my_multiplier_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 376.371 ; gain = 24.543
+update_ip_catalog: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 351.254 ; gain = 31.414
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 375.625 ; gain = 24.371
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15148 
+INFO: Helper process launched with PID 528 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 484.980 ; gain = 101.711
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 484.000 ; gain = 101.480
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:41]
-INFO: [Synth 8-3491] module 'design_1' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1374' bound to instance 'design_1_i' of component 'design_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'design_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1405]
-INFO: [Synth 8-3491] module 'design_1_Clock_Divider_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_Clock_Divider_0_0_stub.vhdl:5' bound to instance 'Clock_Divider_0' of component 'design_1_Clock_Divider_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1760]
-INFO: [Synth 8-638] synthesizing module 'design_1_Clock_Divider_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_Clock_Divider_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_arithmetic_operations_0_1' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_arithmetic_operations_0_1_stub.vhdl:5' bound to instance 'arithmetic_operations_0' of component 'design_1_arithmetic_operations_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1766]
-INFO: [Synth 8-638] synthesizing module 'design_1_arithmetic_operations_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_arithmetic_operations_0_1_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_jc2_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_jc2_0_0_stub.vhdl:5' bound to instance 'jc2_0' of component 'design_1_jc2_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1790]
-INFO: [Synth 8-638] synthesizing module 'design_1_jc2_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_jc2_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'left' of component 'design_1_xlslice_0_2' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1798]
+INFO: [Synth 8-3491] module 'design_1' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1121' bound to instance 'design_1_i' of component 'design_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'design_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1152]
+INFO: [Synth 8-3491] module 'design_1_Clock_Divider_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_Clock_Divider_0_0_stub.vhdl:5' bound to instance 'Clock_Divider_0' of component 'design_1_Clock_Divider_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1463]
+INFO: [Synth 8-638] synthesizing module 'design_1_Clock_Divider_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_Clock_Divider_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_arithmetic_operations_0_1' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_arithmetic_operations_0_1_stub.vhdl:5' bound to instance 'arithmetic_operations_0' of component 'design_1_arithmetic_operations_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1469]
+INFO: [Synth 8-638] synthesizing module 'design_1_arithmetic_operations_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_arithmetic_operations_0_1_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_jc2_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_jc2_0_0_stub.vhdl:5' bound to instance 'jc2_0' of component 'design_1_jc2_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1493]
+INFO: [Synth 8-638] synthesizing module 'design_1_jc2_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_jc2_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'left' of component 'design_1_xlslice_0_2' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1501]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_2' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -41,46 +42,42 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice' [d:/dev/xilinx
 	Parameter DIN_TO bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice' (1#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (2#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
-INFO: [Synth 8-3491] module 'design_1_my_multiplier_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_my_multiplier_0_0_stub.vhdl:5' bound to instance 'my_multiplier_0' of component 'design_1_my_multiplier_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1803]
-INFO: [Synth 8-638] synthesizing module 'design_1_my_multiplier_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_my_multiplier_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_my_multiplier_1_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_my_multiplier_1_0_stub.vhdl:5' bound to instance 'my_multiplier_1' of component 'design_1_my_multiplier_1_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1827]
-INFO: [Synth 8-638] synthesizing module 'design_1_my_multiplier_1_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_my_multiplier_1_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1851]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_processing_system7_0_0_stub.vhdl:79]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:773]
+INFO: [Synth 8-3491] module 'design_1_my_multiplier_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_my_multiplier_0_0_stub.vhdl:5' bound to instance 'my_multiplier_0' of component 'design_1_my_multiplier_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1506]
+INFO: [Synth 8-638] synthesizing module 'design_1_my_multiplier_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_my_multiplier_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1530]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_processing_system7_0_0_stub.vhdl:79]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:641]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (3#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:61]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:172]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (4#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:283]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (5#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:283]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:413]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:596]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (6#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:413]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1288]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (7#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:773]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'right' of component 'design_1_xlslice_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:2030]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:302]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:485]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (5#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:302]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1054]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (6#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:641]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'right' of component 'design_1_xlslice_0_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1688]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
 	Parameter DIN_FROM bound to: 1 - type: integer 
 	Parameter DIN_TO bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' (7#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (8#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:2035]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-15612-DESKTOP-B175D9L/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'stop' of component 'design_1_xlslice_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:2048]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized0' (6#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (7#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1693]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/.Xil/Vivado-7476-DESKTOP-B175D9L/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'stop' of component 'design_1_xlslice_0_1' [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1706]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_1_xlslice__parameterized1' [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
 	Parameter DIN_FROM bound to: 2 - type: integer 
 	Parameter DIN_TO bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized1' (8#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (9#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (10#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1405]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (11#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:41]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_1_xlslice__parameterized1' (7#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ipshared/f3db/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (8#1) [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (9#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/synth/design_1.vhd:1152]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (10#1) [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:41]
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[31]
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[30]
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized1 has unconnected port Din[29]
@@ -145,10 +142,6 @@ WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconn
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice__parameterized0 has unconnected port Din[0]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_14WQB4R has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_XU9C55 has unconnected port S_ACLK
@@ -161,8 +154,6 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[31]
@@ -181,9 +172,15 @@ WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[1
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[18]
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[17]
 WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[16]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[15]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[14]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[13]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[11]
+WARNING: [Synth 8-3331] design xlslice_v1_0_1_xlslice has unconnected port Din[10]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 543.008 ; gain = 159.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 542.434 ; gain = 159.914
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -196,10 +193,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 543.008 ; gain = 159.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.434 ; gain = 159.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 543.008 ; gain = 159.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.434 ; gain = 159.914
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -212,16 +209,14 @@ Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/source
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_jc2_0_0/design_1_jc2_0_0/design_1_jc2_0_0_in_context.xdc] for cell 'design_1_i/jc2_0'
 Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_Clock_Divider_0_0/design_1_Clock_Divider_0_0/design_1_Clock_Divider_0_0_in_context.xdc] for cell 'design_1_i/Clock_Divider_0'
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_Clock_Divider_0_0/design_1_Clock_Divider_0_0/design_1_Clock_Divider_0_0_in_context.xdc] for cell 'design_1_i/Clock_Divider_0'
-Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_0'
-Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_0'
 Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
-Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_1_0/design_1_my_multiplier_1_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_1'
-Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_1_0/design_1_my_multiplier_1_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_1'
 Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1_in_context.xdc] for cell 'design_1_i/arithmetic_operations_0'
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1/design_1_arithmetic_operations_0_1_in_context.xdc] for cell 'design_1_i/arithmetic_operations_0'
+Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_0'
+Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0_in_context.xdc] for cell 'design_1_i/my_multiplier_0'
 Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/dev/xilinx_exam/johnson_counter/johnson_counter.srcs/constrs_1/new/johnson_counter.xdc]
@@ -230,24 +225,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 851.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 843.047 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 851.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 843.047 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 851.469 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 851.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 843.047 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 843.047 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 851.469 ; gain = 468.199
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 843.047 ; gain = 460.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 851.469 ; gain = 468.199
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 843.047 ; gain = 460.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -519,18 +514,17 @@ Applied set_property DONT_TOUCH = true for design_1_i/Clock_Divider_0. (constrai
 Applied set_property DONT_TOUCH = true for design_1_i/right. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/stop. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/left. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/my_multiplier_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/my_multiplier_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/arithmetic_operations_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/my_multiplier_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 851.469 ; gain = 468.199
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 843.047 ; gain = 460.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 851.469 ; gain = 468.199
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 843.047 ; gain = 460.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -566,7 +560,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 851.469 ; gain = 468.199
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 843.047 ; gain = 460.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -580,13 +574,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 873.223 ; gain = 489.953
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 871.957 ; gain = 489.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 873.301 ; gain = 490.031
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 872.105 ; gain = 489.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -598,7 +592,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -622,7 +616,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -635,7 +629,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -647,25 +641,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -681,9 +675,8 @@ Report BlackBoxes:
 |4     |design_1_arithmetic_operations_0_1 |         1|
 |5     |design_1_jc2_0_0                   |         1|
 |6     |design_1_my_multiplier_0_0         |         1|
-|7     |design_1_my_multiplier_1_0         |         1|
-|8     |design_1_processing_system7_0_0    |         1|
-|9     |design_1_rst_ps7_0_100M_0          |         1|
+|7     |design_1_processing_system7_0_0    |         1|
+|8     |design_1_rst_ps7_0_100M_0          |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
@@ -692,48 +685,47 @@ Report Cell Usage:
 +------+------------------------------------------+------+
 |1     |design_1_Clock_Divider_0_0_bbox_0         |     1|
 |2     |design_1_arithmetic_operations_0_1_bbox_1 |     1|
-|3     |design_1_auto_pc_0_bbox_6                 |     1|
+|3     |design_1_auto_pc_0_bbox_5                 |     1|
 |4     |design_1_jc2_0_0_bbox_2                   |     1|
 |5     |design_1_my_multiplier_0_0_bbox_3         |     1|
-|6     |design_1_my_multiplier_1_0_bbox_4         |     1|
-|7     |design_1_processing_system7_0_0_bbox_5    |     1|
-|8     |design_1_rst_ps7_0_100M_0_bbox_8          |     1|
-|9     |design_1_xbar_0_bbox_7                    |     1|
-|10    |OBUF                                      |     4|
+|6     |design_1_processing_system7_0_0_bbox_4    |     1|
+|7     |design_1_rst_ps7_0_100M_0_bbox_7          |     1|
+|8     |design_1_xbar_0_bbox_6                    |     1|
+|9     |OBUF                                      |     4|
 +------+------------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |  1007|
-|2     |  design_1_i         |design_1                    |  1003|
+|1     |top                  |                            |   855|
+|2     |  design_1_i         |design_1                    |   851|
 |3     |    left             |design_1_xlslice_0_2        |     0|
-|4     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   551|
+|4     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   440|
 |5     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 |6     |    right            |design_1_xlslice_0_0        |     0|
 |7     |    stop             |design_1_xlslice_0_1        |     0|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 883.352 ; gain = 191.621
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 883.352 ; gain = 500.082
+Synthesis finished with 0 errors, 0 critical warnings and 99 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 882.379 ; gain = 199.246
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 882.379 ; gain = 499.859
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 895.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.039 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 895.184 ; gain = 518.813
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 895.184 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 894.109 ; gain = 518.484
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.109 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/dev/xilinx_exam/johnson_counter/johnson_counter.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 20 00:36:49 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 24 02:19:57 2019...

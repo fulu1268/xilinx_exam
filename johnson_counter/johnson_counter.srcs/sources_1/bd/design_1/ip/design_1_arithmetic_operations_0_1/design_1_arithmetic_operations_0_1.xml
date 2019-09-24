@@ -361,7 +361,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -370,7 +370,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -581,11 +581,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 19 15:55:53 UTC 2019</spirit:value>
+            <spirit:value>Mon Sep 23 17:11:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:44a70ee6</spirit:value>
+            <spirit:value>9:d0529b25</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -601,11 +601,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 19 15:55:53 UTC 2019</spirit:value>
+            <spirit:value>Mon Sep 23 17:11:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:44a70ee6</spirit:value>
+            <spirit:value>9:d0529b25</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -621,11 +621,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 19 15:55:53 UTC 2019</spirit:value>
+            <spirit:value>Mon Sep 23 17:11:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:69dc31a4</spirit:value>
+            <spirit:value>9:fd29a467</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -641,11 +641,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 19 15:55:53 UTC 2019</spirit:value>
+            <spirit:value>Mon Sep 23 17:11:04 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:69dc31a4</spirit:value>
+            <spirit:value>9:fd29a467</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -659,11 +659,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 19 15:56:47 UTC 2019</spirit:value>
+            <spirit:value>Mon Sep 23 17:12:01 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:44a70ee6</spirit:value>
+            <spirit:value>9:d0529b25</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1014,15 +1014,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/alu.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/alu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/arithmetic_operations_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/arithmetic_operations_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/arithmetic_operations_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/arithmetic_operations_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1037,15 +1037,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/alu.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/alu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/arithmetic_operations_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/arithmetic_operations_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/841c/hdl/arithmetic_operations_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/9fc5/hdl/arithmetic_operations_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1154,7 +1154,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>arithmetic_operations_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@9a4250d_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff5f91d_ARCHIVE_LOCATION">d:/dev/xilinx/ip_repo/arithmetic_operations_1.0</xilinx:tag>
@@ -1268,6 +1268,45 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@12ba8e75_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7c04377c_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2c687d_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233558b9_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b3c650_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fedd4ad_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77924bb6_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ac9ac4_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e5407b0_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e57c812_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a61fde_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14081b2f_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72a9485c_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e9ae221_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bada60e_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4085207a_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@95fc5a0_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37d728ea_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4857dea_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@95cb3e3_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@598f5adc_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b49a37c_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17b5e174_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b8497b3_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79f3d2aa_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b106c62_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c9314d_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317171ef_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ab07ac_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a3841dd_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c66e5a_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f231134_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6061489a_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c4805a_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6072ba60_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580877c_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66dc99c3_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c46f664_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1db4eb7f_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a74c827_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28621dfd_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73bff075_ARCHIVE_LOCATION">d:/dev/xilinx_exam/ip_repo/arithmetic_operations_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1288,8 +1327,8 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1302,7 +1341,7 @@
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4b1e9277"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0e6951dd"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4bdab610"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="276819bb"/>

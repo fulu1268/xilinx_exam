@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Sep 19 19:42:47 2019
-// Host        : DESKTOP-64C0FQA running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/dev/HDL/xilinx_exam/johnson_counter/johnson_counter.srcs/sources_1/bd/design_1/ip/design_1_my_multiplier_0_0/design_1_my_multiplier_0_0_sim_netlist.v
+// Date        : Sun Sep  1 14:45:39 2019
+// Host        : DESKTOP-B175D9L running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_my_multiplier_0_0 -prefix
+//               design_1_my_multiplier_0_0_ design_1_my_multiplier_0_0_sim_netlist.v
 // Design      : design_1_my_multiplier_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -103,7 +103,6 @@ module design_1_my_multiplier_0_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "multiplier" *) 
 module design_1_my_multiplier_0_0_multiplier
    (P,
     s00_axi_aclk,
@@ -206,7 +205,6 @@ module design_1_my_multiplier_0_0_multiplier
         .UNDERFLOW(NLW_p_reg_UNDERFLOW_UNCONNECTED));
 endmodule
 
-(* ORIG_REF_NAME = "my_multiplier_v1_0" *) 
 module design_1_my_multiplier_0_0_my_multiplier_v1_0
    (S_AXI_WREADY,
     S_AXI_AWREADY,
@@ -281,7 +279,6 @@ module design_1_my_multiplier_0_0_my_multiplier_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "my_multiplier_v1_0_S00_AXI" *) 
 module design_1_my_multiplier_0_0_my_multiplier_v1_0_S00_AXI
    (S_AXI_WREADY,
     S_AXI_AWREADY,
